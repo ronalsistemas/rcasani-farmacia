@@ -1,0 +1,100 @@
+#Instalar docker y docker-compose
+#Crear network
+#docker network create ms-network-farmacia
+#Levantar servicios core con el siguiente comando, solo si estamos en la raiz del proyecto:
+# docker-compose --file docker/infra-compose.yml --profile core up
+
+#Levantar servicios si estoy dentro de la carpeta docker
+# docker-compose --profile core --file infra-compose.yml up
+
+#Depende la version de docker-compose que tengas instalado, puede que necesites usar "docker compose" en lugar de "docker-compose"
+
+services:
+
+  postgres-orden-v1:
+    profiles: ["core"]
+    image: postgres:16
+    container_name: postgres-orden-v1
+    restart: always
+    environment:
+      POSTGRES_DB: ordendb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "40010:5432"
+    volumes:
+      - api-orden-service-v1-db-data:/var/lib/postgresql/data
+    networks:
+      - ms-network-farmacia
+
+  postgres-pagos-v1:
+    profiles: ["core"]
+    image: postgres:16
+    container_name: postgres-pagos-v1
+    restart: always
+    environment:
+      POSTGRES_DB: pagosdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "40016:5432"
+    volumes:
+      - api-pagos-service-v1-db-data:/var/lib/postgresql/data
+    networks:
+      - ms-network-farmacia
+
+  postgres-farmacia-v1:
+    profiles: ["core"]
+    image: postgres:16
+    container_name: postgres-farmacia-v1
+    restart: always
+    environment:
+      POSTGRES_DB: farmaciadb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "40030:5432"
+    volumes:
+      - api-farmacia-service-v1-db-data:/var/lib/postgresql/data
+    networks:
+      - ms-network-farmacia
+
+  postgres-entrega-v1:
+    profiles: ["core"]
+    image: postgres:16
+    container_name: postgres-entrega-v1
+    restart: always
+    environment:
+      POSTGRES_DB: entregadb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "40020:5432"
+    volumes:
+      - api-entrega-service-v1-db-data:/var/lib/postgresql/data
+    networks:
+      - ms-network-farmacia
+
+  api-mastercad-service-v1:
+    profiles: ["core"]
+    build:
+      context: ../../api-mastercad-service-v1
+      dockerfile: Dockerfile
+    container_name: api-mastercad-service-v1
+    ports:
+      - "40017:40017"
+    networks:
+      - ms-network-farmacia
+
+
+volumes:
+  api-orden-service-v1-db-data:
+  api-pagos-service-v1-db-data:
+  api-farmacia-service-v1-db-data:
+  api-entrega-service-v1-db-data:
+
+#crear el network de forma manual
+#docker network create ms-network-curso
+networks:
+  ms-network-farmacia:
+    external: true

@@ -1,0 +1,18 @@
+[submodule "api-config-server-v1"]
+	path = api-config-server-v1
+	url = https://github.com/ronalsistemas/api-config-server-v1.git
+[submodule "api-entrega-service-v1"]
+	path = api-entrega-service-v1
+	url = https://github.com/ronalsistemas/api-entrega-service-v1.git
+[submodule "api-farmacia-service-v1"]
+	path = api-farmacia-service-v1
+	url = https://github.com/ronalsistemas/api-farmacia-service-v1.git
+[submodule "api-orden-orchestrator-service-v1"]
+	path = api-orden-orchestrator-service-v1
+	url = https://github.com/ronalsistemas/api-orden-orchestrator-service-v1.git
+[submodule "api-orden-service-v1"]
+	path = api-orden-service-v1
+	url = https://github.com/ronalsistemas/api-orden-service-v1.git
+[submodule "api-pagos-service-v1"]
+	path = api-pagos-service-v1
+	url = https://github.com/ronalsistemas/api-pagos-service-v1.git
