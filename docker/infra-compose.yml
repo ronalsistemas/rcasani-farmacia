@@ -86,6 +86,19 @@ services:
     networks:
       - ms-network-farmacia
 
+  api-config-server-v1:
+    profiles: ["core"]
+    build:
+      context: ../api-config-server-v1
+      dockerfile: Dockerfile
+    container_name: api-config-server-v1
+    ports:
+      - "8888:8888"
+    environment:
+      - SPRING_PROFILES_ACTIVE=config-server
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    networks:
+      - ms-network-farmacia
 
 volumes:
   api-orden-service-v1-db-data:

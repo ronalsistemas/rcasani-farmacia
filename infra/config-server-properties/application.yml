@@ -1,0 +1,19 @@
+
+http-clients:
+  internal:
+    api-orden-service-v1:
+      base-url: http://localhost:40011/api/v1/ordenes
+      timeout: 5s
+    api-pagos-service-v1:
+      base-url: http://localhost:40014/api/v1/pagos
+      timeout: 5s
+    api-farmacia-service-v1:
+      base-url: http://localhost:40013/api/v1/farmacias
+      timeout: 5s
+    api-entrega-service-v1:
+      base-url: http://localhost:40012/api/v1/entrega
+      timeout: 5s
+  external:
+    api-mastercad-service-v1:
+      base-url: http://localhost:40017/api/mastercard
+      timeout: 5s
