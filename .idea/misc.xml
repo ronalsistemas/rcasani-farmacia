@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/api-pagos-service-v1/pom.xml" />
         <option value="$PROJECT_DIR$/api-orden-orchestrator-service-v1/pom.xml" />
         <option value="$PROJECT_DIR$/api-config-server-v1/pom.xml" />
+        <option value="$PROJECT_DIR$/api-eureka-server-v1/pom.xml" />
       </list>
     </option>
   </component>

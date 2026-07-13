@@ -100,6 +100,17 @@ services:
     networks:
       - ms-network-farmacia
 
+  api-eureka-server-v1:
+    profiles: [ "core" ]
+    build:
+      context: ../api-eureka-server-v1
+      dockerfile: Dockerfile
+    container_name: api-eureka-server-v1
+    ports:
+      - "8761:8761"
+    networks:
+      - ms-network-farmacia
+
 volumes:
   api-orden-service-v1-db-data:
   api-pagos-service-v1-db-data:

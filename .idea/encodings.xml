@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/api-config-server-v1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-entrega-service-v1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-eureka-server-v1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-farmacia-service-v1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-orden-orchestrator-service-v1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-orden-service-v1/src/main/java" charset="UTF-8" />
