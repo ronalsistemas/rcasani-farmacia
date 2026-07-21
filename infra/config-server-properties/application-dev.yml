@@ -1,7 +1,7 @@
 http-clients:
   internal:
     api-orden-service-v1:
-      base-url: http://localhost:40011/api/v1/ordenes
+      base-url: http://api-orden-service-v1/api/v1/ordenes
       timeout: 5s
     api-pagos-service-v1:
       base-url: http://api-pagos-service-v1/api/v1/pagos

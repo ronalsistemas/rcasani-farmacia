@@ -93,7 +93,7 @@ services:
       dockerfile: Dockerfile
     container_name: api-config-server-v1
     ports:
-      - "8888:8888"
+      - "8889:8889"
     environment:
       - SPRING_PROFILES_ACTIVE=config-server
       - GITHUB_TOKEN=${GITHUB_TOKEN}
