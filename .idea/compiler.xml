@@ -15,6 +15,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
         </processorPath>
         <module name="api-entrega-service-v1" />
       </profile>
@@ -24,11 +25,21 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
         </processorPath>
         <module name="api-pagos-service-v1" />
         <module name="api-orden-service-v1" />
         <module name="api-orden-orchestrator-service-v1" />
         <module name="api-farmacia-service-v1" />
+      </profile>
+      <profile name="Annotation profile for api-pagos-service-v2" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
+        </processorPath>
+        <module name="api-pagos-service-v2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="21" />
@@ -42,6 +53,7 @@
       <module name="api-orden-orchestrator-service-v1" options="-parameters" />
       <module name="api-orden-service-v1" options="-parameters" />
       <module name="api-pagos-service-v1" options="-parameters" />
+      <module name="api-pagos-service-v2" options="-parameters" />
     </option>
   </component>
 </project>

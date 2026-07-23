@@ -43,6 +43,22 @@ services:
     networks:
       - ms-network-farmacia
 
+  postgres-pagos-v2:
+    profiles: [ "core" ]
+    image: postgres:16
+    container_name: postgres-pagos-v2
+    restart: always
+    environment:
+      POSTGRES_DB: pagosdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "40026:5432"
+    volumes:
+      - api-pagos-service-v2-db-data:/var/lib/postgresql/data
+    networks:
+      - ms-network-farmacia
+
   postgres-farmacia-v1:
     profiles: ["core"]
     image: postgres:16
@@ -116,6 +132,7 @@ volumes:
   api-pagos-service-v1-db-data:
   api-farmacia-service-v1-db-data:
   api-entrega-service-v1-db-data:
+  api-pagos-service-v2-db-data:
 
 #crear el network de forma manual
 #docker network create ms-network-curso

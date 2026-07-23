@@ -9,5 +9,6 @@
     <mapping directory="$PROJECT_DIR$/api-orden-orchestrator-service-v1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/api-orden-service-v1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/api-pagos-service-v1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/api-pagos-service-v2" vcs="Git" />
   </component>
 </project>

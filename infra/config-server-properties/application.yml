@@ -7,6 +7,9 @@ http-clients:
     api-pagos-service-v1:
       base-url: http://localhost:40014/api/v1/pagos
       timeout: 5s
+    api-pagos-service-v2:
+      base-url: http://localhost:40024/api/v2/pagos
+      timeout: 5s
     api-farmacia-service-v1:
       base-url: http://localhost:40013/api/v1/farmacias
       timeout: 5s

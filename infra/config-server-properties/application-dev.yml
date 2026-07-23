@@ -6,6 +6,9 @@ http-clients:
     api-pagos-service-v1:
       base-url: http://api-pagos-service-v1/api/v1/pagos
       timeout: 5s
+    api-pagos-service-v2:
+      base-url: http://api-pagos-service-v2/api/v1/pagos
+      timeout: 5s
     api-farmacia-service-v1:
       base-url: http://api-farmacia-service-v1/api/v1/farmacias
       timeout: 5s

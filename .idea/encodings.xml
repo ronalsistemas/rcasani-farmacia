@@ -8,5 +8,6 @@
     <file url="file://$PROJECT_DIR$/api-orden-orchestrator-service-v1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-orden-service-v1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-pagos-service-v1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-pagos-service-v2/src/main/java" charset="UTF-8" />
   </component>
 </project>
