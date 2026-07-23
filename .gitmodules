@@ -19,3 +19,7 @@
 [submodule "api-eureka-server-v1"]
 	path = api-eureka-server-v1
 	url = https://github.com/ronalsistemas/api-eureka-server-v1.git
+[submodule "api-pagos-service-v2"]
+	path = api-pagos-service-v2
+	url = https://github.com/ronalsistemas/api-pagos-service-v2.git
+	branch = main
